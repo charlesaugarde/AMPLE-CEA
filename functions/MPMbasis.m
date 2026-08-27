@@ -55,7 +55,10 @@ elseif nD == 3
     indx = [2 3; 1 3; 1 2];                                                 % index for basis derivatives (3D)
 end
 Svp=prod(S);                                                                % basis function
-for i=1:nD                                                                  
-    dSvp(i)=dS(i)*prod(S(indx(i,:)));                                       % gradient of the basis function
-end
+if nD==1
+    dSvp=dS;
+else
+    for i=1:nD                                                                  
+        dSvp(i)=dS(i)*prod(S(indx(i,:)));                                   % gradient of the basis function
+    end
 end

@@ -37,6 +37,9 @@ for mp = 1:nmp
    Svp = mpData(mp).Svp;                                                    % basis functions
    fp  = (mpData(mp).mpM*grav + mpData(mp).fp)*Svp;                         % material point body & point nodal forces
    ed  = repmat((nIN-1)*nD,nD,1)+repmat((1:nD).',1,nn);                     % nodel degrees of freedom 
+   if nD ==1
+       fp=fp';
+   end
    fext(ed) = fext(ed) + fp;                                                % combine into external force vector
 end
 end

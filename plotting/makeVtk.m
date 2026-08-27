@@ -60,6 +60,12 @@ elseif nD==2
         elemId=23;
         elemFormat='%i %i %i %i %i %i %i %i %i\n';
     end
+elseif nD==1
+    if nen==2
+        tvtk=[1 2];
+        elemId=3;
+        elemFormat='%i %i %i\n';
+    end
 end
 
 %% Generation of vtk file
