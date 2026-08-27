@@ -26,8 +26,11 @@ AMPLE_1.1 - version 1.1, released August 2020 - focused on runtime improvement
 
 July 2026:
 * added 3D elastic column collapse creating a new setup file called `setupGrid_column3D.m`
-* for consistency renamed the 2D elasric column collapse to `setupGrid_column2D.m`
+* for consistency renamed the 2D elastic column collapse to `setupGrid_column2D.m`
 * created `formCoord3D.m` for the 3D example
 * in testing the 3D problem came across convergence issues and generation of stresses in the two horizontal directions. Tracked this down to the generation of very small impaginary parts to `duvw`, caused by slight unsymmetry in `epsEN` and `BeT` not seen with the 2D version. Dealt with this by adding lines to ensure symmetry e.g. `epsEn = 0.5*(epsEn + epsEn');` in `detMPs.m`.
 * to discuss with WMC - addition/amendment of commenting in the code, dates at the top etc.
+  
+August 2026
+* added 1D column example `setupGrid_column1D.m`. Checked for agreement with 2D case for both standard MPM and GIMP
   
