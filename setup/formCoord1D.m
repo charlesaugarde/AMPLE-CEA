@@ -29,7 +29,7 @@ nodes = (nelsx+1);                                                          % nu
 %% node generation
 coord = zeros(nodes,1);                                                     % zero coordinates 
 node  = 0;                                                                  % zero node counter
-for i=0:nelsx
+for i=0:nels
     node=node+1;
     coord(node,1)=lx*i/nelsx;
 end

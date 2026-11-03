@@ -102,7 +102,7 @@ mesh.eMax  = eMax;                                                          % el
 ngp    = mp^nD;                                                             % number of material points per element
 GpLoc  = detMpPos(mp,nD);                                                   % local MP locations (for each element)
 N      = shapefunc(nen,GpLoc,nD);                                           % basis functions for the material points
-[etplmp,coordmp] = formCoord1D(nelsx,lx);                          % mesh for MP generation
+[etplmp,coordmp] = formCoord1D(nelsx,lx);                                % mesh for MP generation
 nelsmp = size(etplmp,1);                                                    % no. elements populated with material points
 nmp    = ngp*nelsmp;                                                        % total number of mterial points
 

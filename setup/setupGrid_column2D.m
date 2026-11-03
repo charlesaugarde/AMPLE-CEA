@@ -63,7 +63,7 @@ nelsx  = 1;                                                                 % nu
 nelsy  = 2^6;                                                               % number of elements in the y direction
 ly     = 50;  lx = ly/nelsy;                                                % domain dimensions
 mp     = 2;                                                                 % number of material points in each direction per element
-mpType = 2;                                                                 % material point type: 1 = MPM, 2 = GIMP
+mpType = 1;                                                                 % material point type: 1 = MPM, 2 = GIMP
 cmType = 1;                                                                 % constitutive model: 1 = elastic, 2 = vM plasticity
 
 %% Mesh generation
