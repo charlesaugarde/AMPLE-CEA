@@ -62,7 +62,7 @@ lstps  = 40;                                                                % nu
 nelsx  = 2^6;                                                               % number of elements in the x direction
 lx = 50;                                                                    % domain dimensions
 mp     = 2;                                                                 % number of material points in each direction per element
-mpType = 2;                                                                 % material point type: 1 = MPM, 2 = GIMP
+mpType = 1;                                                                 % material point type: 1 = MPM, 2 = GIMP
 cmType = 1;                                                                 % constitutive model: 1 = elastic, 2 = vM plasticity
 
 %% Mesh generation
@@ -96,7 +96,7 @@ mesh.coord = coord;                                                         % no
 mesh.bc    = bc;                                                            % boundary conditions
 mesh.h     = h;                                                             % mesh size
 mesh.eMin  = eMin;                                                          % element lower coordinate limit 
-mesh.eMax  = eMax;                                                          % element upper coordainte limit 
+mesh.eMax  = eMax;                                                          % element upper coordinate limit 
 
 %% Material point generation
 ngp    = mp^nD;                                                             % number of material points per element
